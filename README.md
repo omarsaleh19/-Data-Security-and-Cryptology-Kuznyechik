@@ -1,6 +1,5 @@
 
 # -📱🔒 Secure SMS Exchange Application
-This application provides secure SMS exchange by leveraging:
 
 🛡 Encryption-Decryption with Kuznyechik in CBC Mode: Ensures that your messages are securely encrypted and decrypted using the robust Kuznyechik algorithm in Cipher Block Chaining (CBC) mode.
 
@@ -21,10 +20,12 @@ Check KEY: Must be 256-bit.
 Text: Partition the text into 128-bit blocks. If the last block is less than 128-bit, add ‘1’ and pad with zeroes to 128-bit.
 CBC Mode: Loop on the blocks and encrypt each using Kuznyechik.
 Concatenate: All ciphertext blocks into one string and return.
+
 🔓 Decryption
 Check KEY: Must be 256-bit.
 Text: Partition the text into 128-bit blocks.
 Decrypt: Each block using Kuznyechik and CBC mode.
+
 ✍️ Digital Signature
 Alice generates a digital signature on her message using EC ElGamal, and Bob verifies it after decryption to ensure message integrity.
 
